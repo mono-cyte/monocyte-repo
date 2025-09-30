@@ -5,8 +5,9 @@ package("common")
     set_description("Common classes used by the script extenders")
     set_license("zlib")
 
-    add_urls("https://github.com/mono-cyte/common.git")
-    add_versions("2025.09.29", "b2e0538f1c8a534d18e34686b6e3d82b477ed804")
+    add_urls("https://github.com/mono-cyte/common/archive/refs/tags/$(version).tar.gz",
+        "https://github.com/mono-cyte/common.git")
+    add_versions("0.0.1", "c6cc97b3e739c8cedc071d0dd1219bf987af16e5a8851a79cbe1ae1de3dcfb33")
 
     on_install(function (package)
         local configs = {}
