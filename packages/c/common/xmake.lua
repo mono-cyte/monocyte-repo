@@ -7,7 +7,10 @@ package("common")
 
     add_urls("https://github.com/mono-cyte/common/archive/refs/tags/$(version).tar.gz",
         "https://github.com/mono-cyte/common.git")
-    add_versions("0.0.1", "c6cc97b3e739c8cedc071d0dd1219bf987af16e5a8851a79cbe1ae1de3dcfb33")
+
+
+    add_versions("0.0.1", "46a5ad14e7d2b1b65f4bdc8e7c9b079f7728b2eb5932b71433c6ac76a630f517")
+
 
     on_install(function (package)
         local configs = {}
