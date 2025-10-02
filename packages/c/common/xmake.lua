@@ -10,6 +10,7 @@ package("common")
 
 
 
+    add_versions("0.0.3", "45298759ee73357d425cede7089cfd4215a0a9b1b17c1e20cca2f468bab1a905")
     add_versions("0.0.2", "015a3563481ccf77270b31342fb1f031d396e8917e7081bf536f68e620c799a2")
 
 
