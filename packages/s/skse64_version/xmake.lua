@@ -55,7 +55,7 @@ package("skse64_version")
             (rt & 0xF)
 
         assert(rt, "Invalid runtime specified")
-        package:add("defines", "RUNTIME_VERSION=" .. rt)
+        package:add("defines", "RUNTIME_VERSION=" .. rv.packed)
         package:add("files", package:installdir("res/*.rc"))
     end)
 
