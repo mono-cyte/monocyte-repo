@@ -9,7 +9,8 @@ package("common")
         "https://github.com/mono-cyte/common.git")
 
 
-    add_versions("0.0.1", "46a5ad14e7d2b1b65f4bdc8e7c9b079f7728b2eb5932b71433c6ac76a630f517")
+
+    add_versions("0.0.2", "015a3563481ccf77270b31342fb1f031d396e8917e7081bf536f68e620c799a2")
 
 
     on_install("windows|x64", function (package)
