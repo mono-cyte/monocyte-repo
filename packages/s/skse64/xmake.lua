@@ -18,5 +18,9 @@ package("skse64")
         import("package.tools.xmake").install(package)
     end)
 
+    on_load(function (package)
+       package:add("syslinks", "user32", "comdlg32", "shell32")
+    end)
+
     on_test(function (package)
     end)

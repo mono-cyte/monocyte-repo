@@ -18,5 +18,9 @@ package("skse64_loader_common")
         import("package.tools.xmake").install(package)
     end)
 
+    on_load(function (package)
+       package:add("syslinks", "shlwapi", "version", "comdlg32", "user32", "shell32", "advapi32")
+    end)
+
     on_test(function (package)
     end)
