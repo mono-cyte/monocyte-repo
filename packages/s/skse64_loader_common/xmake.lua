@@ -4,7 +4,9 @@ package("skse64_loader_common")
 
     add_deps("common", "skse64_version")
 
-    add_syslinks("shlwapi", "version", "comdlg32", "user32", "shell32","advapi32")
+    if is_plat("windows") then
+        add_syslinks("shlwapi", "version", "comdlg32", "user32", "shell32", "advapi32")
+    end
 
     add_urls("https://github.com/mono-cyte/skse64_loader_common/archive/refs/tags/$(version).tar.gz",
              "https://github.com/mono-cyte/skse64_loader_common.git")

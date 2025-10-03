@@ -59,6 +59,7 @@ package("skse64_version")
             (rt & 0xF)
 
         assert(rt, "Invalid runtime specified")
+        
         -- necessary config for RUNTIME
         package:add("defines", "RUNTIME")
         package:add("defines", "RUNTIME_VERSION=" .. rv.packed)

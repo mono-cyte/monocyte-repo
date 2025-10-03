@@ -4,7 +4,9 @@ package("skse64")
 
     add_deps("common","skse64_version","skse64_common","xbyak")
 
-    add_syslinks("user32", "comdlg32", "shell32")
+    if is_plat("windows") then
+        add_syslinks("user32", "comdlg32", "shell32")
+    end
 
     add_urls("https://github.com/mono-cyte/skse64/archive/refs/tags/$(version).tar.gz",
              "https://github.com/mono-cyte/skse64.git")
