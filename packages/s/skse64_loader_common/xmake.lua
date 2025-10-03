@@ -5,7 +5,7 @@ package("skse64_loader_common")
     add_urls("https://github.com/mono-cyte/skse64_loader_common/archive/refs/tags/$(version).tar.gz",
              "https://github.com/mono-cyte/skse64_loader_common.git")
 
-    add_versions("0.0.1", "829fac35f79f741ac480bf11f9af0d055cb7a7e5255deacf97815ae0541ca10c")
+    add_versions("0.0.2", "207e2e861a9062d6586daa1aea315657d0cc01dd0c84beeaf84cae81d6a880aa")
 
     on_install(function (package)
         local configs = {}
