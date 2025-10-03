@@ -2,7 +2,7 @@ package("skse64_common")
     set_homepage("https://github.com/mono-cyte/skse64_common")
     set_description("")
 
-    add_requires("common", "skse64_version")
+    add_deps("common", "skse64_version")
 
     add_urls("https://github.com/mono-cyte/skse64_common/archive/refs/tags/$(version).tar.gz",
     "https://github.com/mono-cyte/skse64_common.git")

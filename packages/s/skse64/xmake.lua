@@ -2,7 +2,7 @@ package("skse64")
     set_homepage("https://github.com/mono-cyte/skse64")
     set_description("")
 
-    add_requires("common","skse64_version","skse64_common","xbyak")
+    add_deps("common","skse64_version","skse64_common","xbyak")
 
     add_syslinks("user32", "comdlg32", "shell32")
 
