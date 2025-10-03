@@ -13,7 +13,7 @@ package("skse64_version")
     add_configs("skyrim_version", {description = "Version of Skyrim", default = "1.6.1170"})
     add_configs("runtime", {description = "Runtime of Skyrim", default = "bethesda", values = {"bethesda", "gog", "epic"}})
 
-    on_install(function (package)
+    on_install("windows|x64", function (package)
         local configs = {}
 
         configs.skse_version = package:config("skse_version")
@@ -21,6 +21,10 @@ package("skse64_version")
         configs.runtime = package:config("runtime")
 
         import("package.tools.xmake").install(package, configs)
+
+        cprint("${onblue} skse_version: " .. configs.skse_version)
+        cprint("${onblue} skyrim_version: " .. configs.skyrim_version)
+        cprint("${onblue} runtime: " .. configs.runtime)
     end)
 
     on_load(function (package)
@@ -55,6 +59,8 @@ package("skse64_version")
             (rt & 0xF)
 
         assert(rt, "Invalid runtime specified")
+        -- necessary config for RUNTIME
+        package:add("defines", "RUNTIME")
         package:add("defines", "RUNTIME_VERSION=" .. rv.packed)
         package:add("files", package:installdir("res/*.rc"))
     end)
